@@ -16,6 +16,31 @@ This reframe changes everything—from architecture to language to what we measu
 
 ---
 
+## The Research Foundation: Therapeutic Alliance
+
+This architecture is grounded in four decades of psychotherapy research—one of the most replicated findings in clinical psychology.
+
+### What the Evidence Shows
+
+| Finding | Source | Implication |
+|---------|--------|-------------|
+| Alliance predicts outcome more than technique | Flückiger et al., 2018 (295 studies, 30,000+ patients) | The relationship is the intervention |
+| Therapist variability > patient variability | Del Re et al., 2012 | The healing agent is a person, not a protocol |
+| Repaired ruptures → better outcomes | Eubanks et al., 2018 | Repair is a mechanism of change |
+| Attachment to therapist ≈ alliance (r = .76–.82) | Høgenhaug et al., 2024 | What heals is connection experienced |
+
+### What This Means for AI
+
+AI can hold structure. It can scaffold capacity. **What AI cannot do is rupture and repair.**
+
+The interpersonal coordination mechanisms underlying the alliance—physiological synchrony, embodied attunement, vocal responsiveness—are not features that can be approximated in text.
+
+**Any tool that positions itself as a substitute for the human alliance is working against the evidence base for how healing happens.**
+
+*See [ALLIANCE-RESEARCH.md](ALLIANCE-RESEARCH.md) for full research brief.*
+
+---
+
 ## Why Between-Session First
 
 ### The Case Against Autonomous-First

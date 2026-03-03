@@ -367,14 +367,108 @@
   </div>
 
   <nav class="tabs">
-    <button class="tab active" onclick="showPanel('triadic')">Therapist-Configured Space</button>
+    <button class="tab active" onclick="showPanel('foundation')">Why This Architecture</button>
+    <button class="tab" onclick="showPanel('triadic')">The Triadic Frame</button>
     <button class="tab" onclick="showPanel('standalone')">What Remains Human</button>
     <button class="tab" onclick="showPanel('relational')">Relational Attunement</button>
   </nav>
 
   <main class="content">
+    <!-- Panel 0: Why This Architecture -->
+    <div id="foundation" class="panel active">
+      <div class="card">
+        <h3>The Evidence Base</h3>
+        <p class="card-subtitle">This architecture is grounded in four decades of psychotherapy research.</p>
+
+        <div class="principle" style="margin-bottom: 1rem;">
+          <strong>The core finding:</strong> The quality of the therapist-client relationship predicts treatment outcome more reliably than technique, modality, or diagnosis. This is one of the most replicated findings in clinical psychology.
+        </div>
+
+        <div class="research-stat" style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem;">
+          <div style="flex: 1; min-width: 200px; background: #f8faf9; padding: 1rem; border-radius: 8px; text-align: center;">
+            <div style="font-size: 1.5rem; color: #5a7d6a; font-weight: 600;">295</div>
+            <div style="font-size: 0.75rem; color: #666;">studies synthesized</div>
+          </div>
+          <div style="flex: 1; min-width: 200px; background: #f8faf9; padding: 1rem; border-radius: 8px; text-align: center;">
+            <div style="font-size: 1.5rem; color: #5a7d6a; font-weight: 600;">30,000+</div>
+            <div style="font-size: 0.75rem; color: #666;">patients studied</div>
+          </div>
+          <div style="flex: 1; min-width: 200px; background: #f8faf9; padding: 1rem; border-radius: 8px; text-align: center;">
+            <div style="font-size: 1.5rem; color: #5a7d6a; font-weight: 600;">r = .28</div>
+            <div style="font-size: 0.75rem; color: #666;">alliance-outcome correlation</div>
+          </div>
+        </div>
+
+        <p style="font-size: 0.85rem; color: #555;"><em>Flückiger et al., 2018 — the most comprehensive meta-analysis to date</em></p>
+      </div>
+
+      <div class="card">
+        <h3>The Therapist Is the Variable That Matters</h3>
+        <p class="card-subtitle">Who the therapist is matters more than who the patient is.</p>
+
+        <div class="principle">
+          <strong>Key finding:</strong> Therapist variability accounts for more variance in the alliance-outcome relationship than patient variability (Del Re et al., 2012). The healing agent is not simply a protocol — <strong>it is a person.</strong>
+        </div>
+
+        <div style="margin-top: 1rem; padding: 1rem; background: #fff9f0; border-radius: 8px; border-left: 3px solid #e8a850;">
+          <strong style="color: #b07830;">Design implication:</strong>
+          <span style="font-size: 0.85rem;"> The therapist must <em>author</em> the AI space — configuring it to their clinical approach, their knowledge of this patient, their judgment. AI cannot substitute for this.</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Rupture and Repair: Where Healing Lives</h3>
+        <p class="card-subtitle">It's not the absence of problems — it's how they're repaired.</p>
+
+        <div class="principle">
+          <strong>The research:</strong> Treatment including repaired ruptures is associated with <em>better outcomes</em> than treatment without ruptures at all (Eubanks et al., 2018). The repair itself — the therapist's willingness to acknowledge, attune, and re-engage — is a mechanism of change.
+        </div>
+
+        <div style="margin-top: 1rem; padding: 1rem; background: #fff9f0; border-radius: 8px; border-left: 3px solid #e8a850;">
+          <strong style="color: #b07830;">What this requires:</strong>
+          <span style="font-size: 0.85rem;"> A human who can be genuinely impacted, genuinely wrong, and genuinely present enough to acknowledge it. <strong>AI cannot rupture or repair.</strong></span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>What This Means for AI</h3>
+        <p class="card-subtitle">AI extends reach. It does not replace relationship.</p>
+
+        <div style="display: grid; gap: 0.75rem;">
+          <div class="space-can">
+            <span class="space-can-icon">✓</span>
+            <div class="space-can-text">
+              <strong>AI can hold structure</strong> — psychoeducation, prompts, skill practice
+            </div>
+          </div>
+          <div class="space-can">
+            <span class="space-can-icon">✓</span>
+            <div class="space-can-text">
+              <strong>AI can scaffold capacity</strong> — helping clients engage more fully with their therapist
+            </div>
+          </div>
+          <div class="human-domain">
+            <span class="human-domain-icon">✗</span>
+            <div class="human-domain-text">
+              <strong>AI cannot rupture and repair</strong> — it cannot be genuinely moved or accountable
+            </div>
+          </div>
+          <div class="human-domain">
+            <span class="human-domain-icon">✗</span>
+            <div class="human-domain-text">
+              <strong>AI cannot replace the alliance</strong> — working against the evidence base for how healing happens
+            </div>
+          </div>
+        </div>
+
+        <div class="principle" style="margin-top: 1rem;">
+          <strong>The position:</strong> Any tool that positions itself as a substitute for the human alliance is not just clinically unsupported — it is working against the evidence base for how healing happens.
+        </div>
+      </div>
+    </div>
+
     <!-- Panel 1: Therapist-Configured Space -->
-    <div id="triadic" class="panel active">
+    <div id="triadic" class="panel">
       <div class="card">
         <h3>The Triadic Frame</h3>
         <p class="card-subtitle">Patient practices IN a space the clinician creates — not WITH an AI entity.</p>
@@ -436,13 +530,32 @@
     <!-- Panel 2: What Remains Human -->
     <div id="standalone" class="panel">
       <div class="card">
+        <h3>Rupture and Repair: The Heart of Healing</h3>
+        <p class="card-subtitle">Research shows repaired ruptures lead to better outcomes than no ruptures at all. This is where healing actually lives.</p>
+
+        <div class="principle">
+          <strong>What rupture and repair requires:</strong> A human who can be genuinely impacted, genuinely wrong, and genuinely present enough to acknowledge it. AI cannot do this.
+        </div>
+
+        <div style="margin-top: 1rem; padding: 1rem; background: #f8faf9; border-radius: 8px;">
+          <p style="font-size: 0.85rem; color: #555; margin-bottom: 0.75rem;">The interpersonal coordination mechanisms underlying the alliance cannot be approximated:</p>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <span style="background: #fff9f0; padding: 0.35rem 0.75rem; border-radius: 12px; font-size: 0.8rem; border: 1px solid #e8a850;">Physiological synchrony</span>
+            <span style="background: #fff9f0; padding: 0.35rem 0.75rem; border-radius: 12px; font-size: 0.8rem; border: 1px solid #e8a850;">Embodied attunement</span>
+            <span style="background: #fff9f0; padding: 0.35rem 0.75rem; border-radius: 12px; font-size: 0.8rem; border: 1px solid #e8a850;">Vocal responsiveness</span>
+            <span style="background: #fff9f0; padding: 0.35rem 0.75rem; border-radius: 12px; font-size: 0.8rem; border: 1px solid #e8a850;">Relational accountability</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
         <h3>What Remains Human</h3>
-        <p class="card-subtitle">Some things require embodied presence, relational accountability, and clinical judgment that AI cannot provide.</p>
+        <p class="card-subtitle">These domains require embodied presence, relational accountability, and clinical judgment.</p>
 
         <div class="human-domain">
           <span class="human-domain-icon">🤝</span>
           <div class="human-domain-text">
-            <strong>Rupture and repair</strong> — Healing relational wounds requires human presence
+            <strong>Rupture and repair</strong> — The mechanism of relational healing; requires human presence
           </div>
         </div>
         <div class="human-domain">
@@ -461,6 +574,12 @@
           <span class="human-domain-icon">🚨</span>
           <div class="human-domain-text">
             <strong>Crisis intervention</strong> — Escalates automatically to human care
+          </div>
+        </div>
+        <div class="human-domain">
+          <span class="human-domain-icon">💫</span>
+          <div class="human-domain-text">
+            <strong>The corrective relational experience</strong> — What heals is connection experienced, not information delivered
           </div>
         </div>
       </div>
