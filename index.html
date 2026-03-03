@@ -385,20 +385,9 @@
   </div>
 
   <script>
-    // Simple hash check (mvp)
-    const h = '1a7e7';
-    function simpleHash(s) {
-      let hash = 0;
-      for (let i = 0; i < s.length; i++) {
-        hash = ((hash << 5) - hash) + s.charCodeAt(i);
-        hash |= 0;
-      }
-      return (hash >>> 0).toString(16);
-    }
-
     function checkPassword() {
       const input = document.getElementById('password-input').value;
-      if (simpleHash(input) === h) {
+      if (input === 'mvp') {
         sessionStorage.setItem('btw-auth', 'true');
         document.getElementById('login-gate').classList.add('hidden');
         document.getElementById('app-content').classList.add('visible');
@@ -407,7 +396,6 @@
       }
     }
 
-    // Check if already authenticated
     if (sessionStorage.getItem('btw-auth') === 'true') {
       document.getElementById('login-gate').classList.add('hidden');
       document.getElementById('app-content').classList.add('visible');
