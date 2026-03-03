@@ -12,6 +12,51 @@
       color: #333;
       line-height: 1.6;
     }
+    #login-gate {
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(135deg, #5a7d6a 0%, #3d5a4a 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+    #login-gate.hidden { display: none; }
+    .login-box {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+      max-width: 320px;
+      width: 90%;
+    }
+    .login-box h2 { color: #5a7d6a; margin-bottom: 0.5rem; }
+    .login-box p { color: #666; font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .login-box input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .login-box input:focus { outline: none; border-color: #5a7d6a; }
+    .login-box button {
+      width: 100%;
+      padding: 0.75rem;
+      background: #5a7d6a;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .login-box button:hover { background: #4a6b5a; }
+    .login-error { color: #d32f2f; font-size: 0.85rem; margin-top: 0.5rem; display: none; }
+    #app-content { display: none; }
+    #app-content.visible { display: block; }
     header {
       background: linear-gradient(135deg, #5a7d6a 0%, #4a6b5a 100%);
       color: white;
@@ -171,6 +216,17 @@
   </style>
 </head>
 <body>
+  <div id="login-gate">
+    <div class="login-box">
+      <h2>BTW Session</h2>
+      <p>Enter password to continue</p>
+      <input type="password" id="password-input" placeholder="Password" onkeypress="if(event.key==='Enter')checkPassword()">
+      <button onclick="checkPassword()">Enter</button>
+      <p class="login-error" id="login-error">Incorrect password</p>
+    </div>
+  </div>
+
+  <div id="app-content">
   <header>
     <h1>BTW Session MVP</h1>
     <p>Bridge to Agential Care</p>
@@ -324,6 +380,37 @@
           <small>Strategy: ${s.strategy}</small>
         </div>
       `;
+    }
+  </script>
+  </div>
+
+  <script>
+    // Simple hash check (mvp)
+    const h = '7c9e7c1b';
+    function simpleHash(s) {
+      let hash = 0;
+      for (let i = 0; i < s.length; i++) {
+        hash = ((hash << 5) - hash) + s.charCodeAt(i);
+        hash |= 0;
+      }
+      return (hash >>> 0).toString(16);
+    }
+
+    function checkPassword() {
+      const input = document.getElementById('password-input').value;
+      if (simpleHash(input) === h) {
+        sessionStorage.setItem('btw-auth', 'true');
+        document.getElementById('login-gate').classList.add('hidden');
+        document.getElementById('app-content').classList.add('visible');
+      } else {
+        document.getElementById('login-error').style.display = 'block';
+      }
+    }
+
+    // Check if already authenticated
+    if (sessionStorage.getItem('btw-auth') === 'true') {
+      document.getElementById('login-gate').classList.add('hidden');
+      document.getElementById('app-content').classList.add('visible');
     }
   </script>
 </body>
